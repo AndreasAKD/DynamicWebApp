@@ -1,0 +1,23 @@
+{
+  "home": "Hem",
+  "about": "Om",
+  "purpose": "Syfte",
+  "services": "Tjänster",
+  "portfolio": "Portfölj",
+  "viewSamples": "Visa exempel på mitt arbete",
+  "aboutMe": "Om mig",
+  "aboutDescription": "Jag är en passionerad webbutvecklare med erfarenhet av att skapa dynamiska och responsiva webbplatser. Jag specialiserar mig på front-end utveckling och har ett gott öga för design.",
+  "skills": "Mina färdigheter inkluderar HTML, CSS, JavaScript, React och mer. Jag är alltid ivrig att lära mig nya teknologier och förbättra mina färdigheter.",
+  "samplesOfWork": "Exempel på mitt arbete",
+  "seeMoreAtPortfolio": "Se mer i portföljmenyn",
+  "contactMe": "Kontakta mig genom att klicka på logotypen nedan",
+  "ourServices": "Mina Tjänster",
+  "servicesDescription": "Vi erbjuder ett brett utbud av tjänster för att möta dina behov. Vårt team av experter är dedikerade till att tillhandahålla förstklassiga lösningar anpassade efter dina krav.",
+  "service1": "Fotografering: Jag kan erbjuda fotografering i olika miljöer, till exempel bröllop, drönarbilder etc, se fotografiportföljsidan för mer information.",
+  "service2": "Tjänst 2: Beskrivning av tjänst 2.",
+  "service3": "Tjänst 3: Beskrivning av tjänst 3.",
+  "service4": "Tjänst 4: Beskrivning av tjänst 4.",
+  "portfolioDescription": "Min portfölj med några exempelbilder.",
+  "portfolioInstructions": "Använd piltangenterna för att navigera mellan bilderna eller svep med fingrarna på mobilen.",
+  "lifeenthusiast": "Lärande för livet"
+}

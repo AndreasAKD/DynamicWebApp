@@ -1,0 +1,57 @@
+# trigger:
+#   branches:
+#     include:
+#       - master
+
+# pool:
+#   vmImage: 'ubuntu-latest'
+
+# variables:
+#   imageName: 'akdstaticwebapp'
+#   containerRegistry: 'akdstaticwebapp.azurecr.io'
+#   azureSubscription: 'akdstaticwebappserviceconnection'  
+#   resourceGroup: 'StaticWebApp'
+#   webAppName: 'akdstaticwebapp'
+#   personalDomain: 'andreaskristiandahlgren'
+#   location: 'northeurope'
+#   dockerServiceConnection: 'staticwebdockerserviceconnection'
+
+# steps:
+# - task: AzureCLI@2
+#   displayName: 'Register Microsoft.Web provider'
+#   inputs:
+#     azureSubscription: '$(azureSubscription)'
+#     scriptType: 'bash'
+#     scriptLocation: 'inlineScript'
+#     inlineScript: |
+#       az provider register --namespace Microsoft.Web
+
+# - task: AzureCLI@2
+#   displayName: 'Register Microsoft.App provider'
+#   inputs:
+#     azureSubscription: '$(azureSubscription)'
+#     scriptType: 'bash'
+#     scriptLocation: 'inlineScript'
+#     inlineScript: |
+#       az provider register --namespace Microsoft.App --wait
+
+# - task: Docker@2
+#   displayName: 'Build and Push Docker image'
+#   inputs:
+#     command: 'buildAndPush'
+#     repository: '$(containerRegistry)/$(imageName)'
+#     dockerfile: '**/Dockerfile'
+#     containerRegistry: '$(dockerServiceConnection)'
+#     tags: |
+#       $(Build.BuildId)
+#       latest
+
+# - task: AzureWebAppContainer@1
+#   displayName: 'Deploy to Azure Web App for Containers - Personal Named Domain'
+#   inputs:
+#     azureSubscription: '$(azureSubscription)'
+#     appName: '$(personalDomain)'  
+#     deployToSlotOrASE: true
+#     resourceGroupName: '$(resourceGroup)'
+#     slotName: 'production'  
+#     containers: 'akdstaticwebapp.azurecr.io/akdstaticwebapp.azurecr.io/akdstaticwebapp:latest'

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #007BFF;
+  --secondary: #6C757D;
+  --accent: #28A745;
+  --navbar-bg: #F8F9FA;
+  --navbar-text: #343A40;
+  --hero-bg: #333333;
+  --hero-text: #ffffff;
+  --about-bg: #ffffff;
+  --about-text: #171717;
+  --portfolio-bg: #f0f0f0;
+  --portfolio-text: #171717;
+  --contact-bg: #ffffff;
+  --contact-text: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #ededed;
+    --primary: #1E90FF;
+    --secondary: #A9A9A9;
+    --accent: #32CD32;
+    --navbar-bg: #1F1F1F;
+    --navbar-text: #ededed;
+    --hero-bg: #1a1a1a;
+    --hero-text: #ededed;
+    --about-bg: #1f1f1f;
+    --about-text: #ededed;
+    --portfolio-bg: #2a2a2a;
+    --portfolio-text: #ededed;
+    --contact-bg: #1f1f1f;
+    --contact-text: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Roboto', sans-serif;
+  line-height: 30px;
+}
+
+p {
+  font-weight: 700;
+}
+
+html {
+  overflow-y: scroll;
+}

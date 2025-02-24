@@ -1,0 +1,23 @@
+{
+  "home": "Home",
+  "about": "About",
+  "purpose": "Purpose",
+  "services": "Services",
+  "portfolio": "Portfolio",
+  "viewSamples": "View samples of my work",
+  "aboutMe": "About Me",
+  "aboutDescription": "I am a passionate web developer with experience in creating dynamic and responsive websites. I specialize in front-end development and have a keen eye for design.",
+  "skills": "My skills include HTML, CSS, JavaScript, React, and more. I am always eager to learn new technologies and improve my skills.",
+  "samplesOfWork": "Samples of my work",
+  "seeMoreAtPortfolio": "See more at the portfolio menu",
+  "contactMe": "Contact Me by clicking the logo below",
+  "ourServices": "My Services",
+  "servicesDescription": "We offer a wide range of services to meet your needs. Our team of experts is dedicated to providing top-notch solutions tailored to your requirements.",
+  "service1": "Photography: I can offer photography in different settings, for example weddings, drone images etc, see photography portfolio page for more information.",
+  "service2": "Service 2: Description of service 2.",
+  "service3": "Service 3: Description of service 3.",
+  "service4": "Service 4: Description of service 4.",
+  "portfolioDescription": "My portfolio with a few sample images.",
+  "portfolioInstructions": "Use keyboard arrows to navigate between images or swipe with fingers on mobile.",
+  "lifeenthusiast": "Learning Enthusiast"
+}
