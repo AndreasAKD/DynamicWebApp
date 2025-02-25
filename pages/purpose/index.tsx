@@ -13,8 +13,8 @@ const Purpose = ({}: PurposeProps) => {
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow p-8 pb-20 sm:p-20 mt-[10vh]">
         <div className="text-xl text-center sm:text-left font-medium">
-          <p className="mb-2" style={{ color: 'white' }}>{t('purpose')}</p>
-          <p style={{ color: 'white' }}>{t('purposeDescription')}</p>
+          <p className="mb-2" style={{ color: 'var(--text-primary)' }}>{t('purpose')}</p>
+          <p style={{ color: 'var(--text-primary)' }}>{t('purposeDescription')}</p>
         </div>
       </main>
     </div>

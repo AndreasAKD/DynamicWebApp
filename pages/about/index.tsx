@@ -13,8 +13,8 @@ const About = ({}: AboutProps) => {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
       <main className="flex-grow p-8 pb-20 sm:p-20 mt-[10vh]">
         <div className="text-xl text-center sm:text-left font-medium">
-          <p className="mb-2" style={{ color: 'white' }}>{t('about')}</p>
-          <p style={{ color: 'white' }}>{t('aboutDescription')}</p>
+          <p className="mb-2" style={{ color: 'var(--text-primary)' }}>{t('about')}</p>
+          <p style={{ color: 'var(--text-primary)' }}>{t('aboutDescription')}</p>
         </div>
       </main>
     </div>

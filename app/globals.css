@@ -20,6 +20,7 @@
   --portfolio-text: #171717;
   --contact-bg: hsl(143, 41%, 63%);
   --contact-text: #171717;
+  --text-primary: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,6 +40,7 @@
     --portfolio-text: #ededed;
     --contact-bg: #1f1f1f;
     --contact-text: #ededed;
+    --text-primary: #ffffff;
   }
 }
 
