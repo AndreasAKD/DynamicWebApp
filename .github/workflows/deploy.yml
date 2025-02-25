@@ -1,10 +1,3 @@
-name: Deploy to Azure Web App
-
-on:
-  push:
-    branches:
-      - main
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -32,9 +25,9 @@ jobs:
     - name: Register Microsoft.App provider
       run: az provider register --namespace Microsoft.App --wait
 
-    # - name: Login to ACR
-    #   run: |
-    #     az acr login --name ${{ env.CONTAINER_REGISTRY }} --expose-token | docker login ${{ env.CONTAINER_REGISTRY }}.azurecr.io -u 00000000-0000-0000-0000-000000000000 --password-stdin
+    - name: Login to ACR
+      run: |
+        az acr login --name ${{ env.CONTAINER_REGISTRY }} --expose-token | docker login ${{ env.CONTAINER_REGISTRY }}.azurecr.io -u 00000000-0000-0000-0000-000000000000 --password-stdin
 
     - name: Build and Push Docker image
       uses: docker/build-push-action@v2
@@ -43,16 +36,13 @@ jobs:
         file: 'Dockerfile'
         push: true
         tags: |
-          ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.run_id }}
-          ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-        registry: ${{ env.CONTAINER_REGISTRY }}
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+          ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.run_id }}
+          ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
 
     - name: Deploy to Azure Web App for Containers - Personal Named Domain
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.PERSONAL_DOMAIN }}
         slot-name: production
-        images: ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+        images: ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
