@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: hsl(143, 32%, 87%);
   --foreground: #171717;
   --primary: #007BFF;
   --secondary: #6C757D;
   --accent: #28A745;
   --navbar-bg: #F8F9FA;
   --navbar-text: #343A40;
-  --hero-bg: #333333;
+  --hero-bg: hsl(143, 32%, 87%);
   --hero-text: #ffffff;
   --about-bg: #ffffff;
   --about-text: #171717;
@@ -44,14 +44,18 @@
 
 body {
   color: var(--foreground);
-  /* background: var(--background); */
-  background-color: var(--hero-bg);
+  background: var(--background);
+  /* background-color: var(--hero-bg); */
   font-family: 'Roboto', sans-serif;
   line-height: 30px;
 }
 
 p {
   font-weight: 700;
+  color: black;
+  @media (prefers-color-scheme: dark) {
+    color: white;
+  }
 }
 
 html {
@@ -62,6 +66,8 @@ html {
 .container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px; /* Optional: Add some padding for better spacing */
-  background-color: var(--hero-bg);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--hero-bg);
+  }
 }

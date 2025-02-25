@@ -1,7 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { useTranslations } from 'next-intl';
 import React from 'react';
-import Image from 'next/image';
 
 type ServicesProps = {
   messages: Record<string, string>;
@@ -13,28 +12,28 @@ const Services = ({}: ServicesProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow p-8 pb-20 sm:p-20 mt-[10vh]">
-        <Image
+        {/* <Image
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
           width={180}
           height={38}
           priority
-        />
+        /> */}
         <section className="text-center sm:text-left mt-16">
-          <h1 className="text-4xl font-bold mb-4">{t('ourServices')}</h1>
-          <p className="text-lg mb-4">
+          <h1 className="text-4xl font-bold mb-8">{t('ourServices')}</h1>
+          <p className="text-lg mb-10">
             {t('servicesDescription')}
           </p>
           <ul className="list-disc list-inside">
-            <li className="mb-2">{t('service1')}</li>
-            <li className="mb-2">{t('service2')}</li>
-            <li className="mb-2">{t('service3')}</li>
-            <li className="mb-2">{t('service4')}</li>
+            <li className="mb-2 font-bold">{t('service1')}</li>
+            <li className="mb-2 font-bold">{t('service2')}</li>
+            <li className="mb-2 font-bold">{t('service3')}</li>
+            <li className="mb-2 font-bold">{t('service4')}</li>
           </ul>
         </section>
       </main>
-      <footer className="flex gap-6 flex-wrap items-center justify-center pb-10">
+      {/* <footer className="flex gap-6 flex-wrap items-center justify-center pb-10">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -80,7 +79,7 @@ const Services = ({}: ServicesProps) => {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 };

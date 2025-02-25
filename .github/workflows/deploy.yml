@@ -10,12 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      IMAGE_NAME: akddynamicwebapp
-      CONTAINER_REGISTRY: akddynamicwebapp
-      RESOURCE_GROUP: DynamicWebApp
-      WEB_APP_NAME: andreaskristiandahlgren
-      PERSONAL_DOMAIN: andreaskristiandahlgren
-      LOCATION: swedencentral
+      IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
+      CONTAINER_REGISTRY: ${{ secrets.CONTAINER_REGISTRY }}
+      RESOURCE_GROUP: ${{ secrets.RESOURCE_GROUP }}
+      WEB_APP_NAME: ${{ secrets.WEB_APP_NAME }}
 
     steps:
     - name: Checkout code

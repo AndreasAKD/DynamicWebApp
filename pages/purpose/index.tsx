@@ -7,14 +7,14 @@ type PurposeProps = {
 };
 
 const Purpose = ({}: PurposeProps) => {
-    const t = useTranslations();
+  const t = useTranslations();
 
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow p-8 pb-20 sm:p-20 mt-[10vh]">
-        <div className="text-sm text-center sm:text-left font-medium">
+        <div className="text-xl text-center sm:text-left font-medium">
           <p className="mb-2">{t('purpose')}</p>
-          <p>{t('aboutDescription')}</p>
+          <p>{t('purposeDescription')}</p>
         </div>
       </main>
     </div>
@@ -30,4 +30,4 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   };
 };
 
-export default Purpose
+export default Purpose;

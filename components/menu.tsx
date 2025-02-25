@@ -76,27 +76,27 @@ export default function Menu() {
           style={{ backgroundColor: 'var(--navbar-bg)', color: 'var(--navbar-text)' }}
         >
           <li>
-            <Link href="/" className="block py-2 sm:py-0 hover:underline" onClick={closeMenu}>
+            <Link href="/" className="block py-2 font-bold sm:py-0 hover:underline" onClick={closeMenu}>
               {t('home')}
             </Link>
           </li>
           <li>
-            <Link href="/about" className="block py-2 sm:py-0 hover:underline" onClick={closeMenu}>
+            <Link href="/about" className="block py-2 font-bold sm:py-0 hover:underline" onClick={closeMenu}>
               {t('about')}
             </Link>
           </li>
           <li>
-            <Link href="/purpose" className="block py-2 sm:py-0 hover:underline" onClick={closeMenu}>
+            <Link href="/purpose" className="block py-2 font-bold sm:py-0 hover:underline" onClick={closeMenu}>
               {t('purpose')}
             </Link>
           </li>
           <li>
-            <Link href="/services" className="block py-2 sm:py-0 hover:underline" onClick={closeMenu}>
+            <Link href="/services" className="block py-2 font-bold sm:py-0 hover:underline" onClick={closeMenu}>
               {t('services')}
             </Link>
           </li>
           <li>
-            <Link href="/portfolio" className="block py-2 sm:py-0 hover:underline" onClick={closeMenu}>
+            <Link href="/portfolio" className="block py-2 font-bold sm:py-0 hover:underline" onClick={closeMenu}>
               {t('portfolio')}
             </Link>
           </li>
