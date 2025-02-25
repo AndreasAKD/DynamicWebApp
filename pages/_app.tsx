@@ -18,8 +18,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <IntlProviderFunction pageProps={pageProps}>
       <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Menu />
-        <Component {...pageProps} />
+        <div className="container">
+          <Menu />
+          <Component {...pageProps} />
+        </div>
       </div>
     </IntlProviderFunction>
   );
