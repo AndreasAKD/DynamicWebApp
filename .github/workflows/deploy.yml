@@ -33,8 +33,11 @@ jobs:
       run: az provider register --namespace Microsoft.App --wait
 
     - name: Login to ACR
-      run: |
-        az acr login --name ${{ env.CONTAINER_REGISTRY }} --expose-token | docker login ${{ env.CONTAINER_REGISTRY }}.azurecr.io -u 00000000-0000-0000-0000-000000000000 --password-stdin
+      uses: docker/login-action@v2
+      with:
+        registry: ${{ env.CONTAINER_REGISTRY }}.azurecr.io
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
 
     - name: Build and Push Docker image
       uses: docker/build-push-action@v2
@@ -45,9 +48,7 @@ jobs:
         tags: |
           ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.run_id }}
           ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
-        registry: ${{ env.CONTAINER_REGISTRY }}
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+        registry: ${{ env.CONTAINER_REGISTRY }}.azurecr.io
 
     - name: Deploy to Azure Web App for Containers - Personal Named Domain
       uses: azure/webapps-deploy@v2
