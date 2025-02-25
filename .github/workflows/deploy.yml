@@ -11,7 +11,7 @@ jobs:
 
     env:
       IMAGE_NAME: akddynamicwebapp
-      CONTAINER_REGISTRY: akddynamicwebapp.azurecr.io
+      CONTAINER_REGISTRY: akddynamicwebapp
       RESOURCE_GROUP: DynamicWebApp
       WEB_APP_NAME: akddynamicwebapp
       PERSONAL_DOMAIN: andreaskristiandahlgren
@@ -31,6 +31,10 @@ jobs:
 
     - name: Register Microsoft.App provider
       run: az provider register --namespace Microsoft.App --wait
+
+    # - name: Login to ACR
+    #   run: |
+    #     az acr login --name ${{ env.CONTAINER_REGISTRY }} --expose-token | docker login ${{ env.CONTAINER_REGISTRY }}.azurecr.io -u 00000000-0000-0000-0000-000000000000 --password-stdin
 
     - name: Build and Push Docker image
       uses: docker/build-push-action@v2
