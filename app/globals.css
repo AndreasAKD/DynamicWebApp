@@ -38,8 +38,8 @@
     --about-text: #ededed;
     --portfolio-bg: #2a2a2a;
     --portfolio-text: #ededed;
-    --contact-bg: #1f1f1f;
-    --contact-text: #ededed;
+    --contact-bg: hsl(143, 41%, 63%);
+    --contact-text: #000000;
     --text-primary: #ffffff;
   }
 }

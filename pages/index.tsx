@@ -44,7 +44,7 @@ const Home = ({}: HomeProps) => {
       <section className="flex flex-col items-center justify-center min-h-screen" style={{ backgroundColor: 'var(--hero-bg)'}}>
         <h1 className="text-3xl font-bold mb-4">Andreas Dahlgren</h1>
         <p className="text-xl mb-8 text-center" style={{ color: 'var(--text-primary)' }}>{t('lifeenthusiast')}</p>
-        <a href="#portfolio" className="px-6 py-3 bg-blue-500 rounded-full hover:bg-blue-600 transition" style={{ color: 'var(--text-primary)' }}>{t('viewSamples')}</a>
+        <a href="#portfolio" className="px-6 py-3 font-bold rounded-full hover:bg-blue-600 transition" style={{ color: 'var(--contact-text)', backgroundColor: 'var(--contact-bg)' }}>{t('viewSamples')}</a>
         <div className="mt-10 animate-bounce">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
