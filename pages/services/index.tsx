@@ -23,7 +23,7 @@ const Services = ({}: ServicesProps) => {
         <section className="text-center sm:text-left mt-16">
           <h1 className="text-4xl font-bold mb-8" style={{ color: 'white' }}>
             {t('ourServices')}</h1>
-          <p className="text-lg mb-10">
+          <p className="text-lg mb-10" style={{ color: 'white' }}>
             {t('servicesDescription')}
           </p>
           <ul className="list-disc list-inside">
