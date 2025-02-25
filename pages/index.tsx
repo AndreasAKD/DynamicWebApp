@@ -43,7 +43,7 @@ const Home = ({}: HomeProps) => {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center min-h-screen" style={{ backgroundColor: 'var(--hero-bg)'}}>
         <h1 className="text-3xl font-bold mb-4">Andreas Dahlgren</h1>
-        <p className="text-xl mb-8 text-center">{t('lifeenthusiast')}</p>
+        <p className="text-xl mb-8 text-center text-white">{t('lifeenthusiast')}</p>
         <a href="#portfolio" className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition">{t('viewSamples')}</a>
         <div className="mt-10 animate-bounce">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -54,9 +54,9 @@ const Home = ({}: HomeProps) => {
 
       {/* About Section */}
       <section className="p-8 sm:p-20">
-        <h2 className="text-3xl font-bold mb-4">{t('aboutMe')}</h2>
-        <p className="text-lg mb-4">{t('aboutDescription')}</p>
-        <p className="text-lg">{t('skills')}</p>
+        <h2 className="text-3xl font-bold mb-4 text-white">{t('aboutMe')}</h2>
+        <p className="text-lg mb-4 text-white">{t('aboutDescription')}</p>
+        <p className="text-lg text-white">{t('skills')}</p>
       </section>
 
       {/* Portfolio Section */}

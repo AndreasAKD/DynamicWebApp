@@ -18,7 +18,7 @@
   --about-text: #171717;
   --portfolio-bg: #f0f0f0;
   --portfolio-text: #171717;
-  --contact-bg: #ffffff;
+  --contact-bg: hsl(143, 41%, 63%);
   --contact-text: #171717;
 }
 
