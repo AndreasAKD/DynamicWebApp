@@ -12,12 +12,10 @@ jobs:
     env:
       IMAGE_NAME: akddynamicwebapp
       CONTAINER_REGISTRY: akddynamicwebapp.azurecr.io
-      AZURE_SUBSCRIPTION: akddynamicwebappserviceconnection
       RESOURCE_GROUP: DynamicWebApp
       WEB_APP_NAME: akddynamicwebapp
       PERSONAL_DOMAIN: andreaskristiandahlgren
       LOCATION: swedencentral
-      DOCKER_SERVICE_CONNECTION: dynamicwebdockerserviceconnection
 
     steps:
     - name: Checkout code
