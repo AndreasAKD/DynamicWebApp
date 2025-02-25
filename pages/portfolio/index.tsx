@@ -44,7 +44,7 @@ const Portfolio = ({}: PortfolioProps) => {
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow p-8 pb-20 sm:p-20">
         <ol className="list-inside list-decimal text-sm text-center sm:text-left">
-          <p className="mb-2 mt-20 text-[40px] leading-[30px]" style={{ color: 'white' }}>
+          <p className="mb-2 mt-20 text-[30px] leading-[30px]" style={{ color: 'white' }}>
             {t('portfolioDescription')}
           </p>
           <p className="mb-2 mt-5" style={{ color: 'white' }}>
