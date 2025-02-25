@@ -53,7 +53,7 @@ const Home = ({}: HomeProps) => {
       </section>
 
       {/* About Section */}
-      <section className="p-8 sm:p-20" style={{ backgroundColor: 'var(--about-bg)', color: 'var(--about-text)' }}>
+      <section className="p-8 sm:p-20">
         <h2 className="text-3xl font-bold mb-4">{t('aboutMe')}</h2>
         <p className="text-lg mb-4">{t('aboutDescription')}</p>
         <p className="text-lg">{t('skills')}</p>
