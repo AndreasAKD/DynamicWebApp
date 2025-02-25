@@ -13,7 +13,7 @@ jobs:
       IMAGE_NAME: akddynamicwebapp
       CONTAINER_REGISTRY: akddynamicwebapp
       RESOURCE_GROUP: DynamicWebApp
-      WEB_APP_NAME: akddynamicwebapp
+      WEB_APP_NAME: andreaskristiandahlgren
       PERSONAL_DOMAIN: andreaskristiandahlgren
       LOCATION: swedencentral
 
@@ -55,5 +55,4 @@ jobs:
         az webapp config container set \
           --name ${{ env.WEB_APP_NAME }} \
           --resource-group ${{ env.RESOURCE_GROUP }} \
-          --docker-custom-image-name ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
-          --slot production
+          --container-image-name ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
