@@ -55,7 +55,8 @@ jobs:
         az webapp config container set \
           --name ${{ env.WEB_APP_NAME }} \
           --resource-group ${{ env.RESOURCE_GROUP }} \
-          --container-image-name ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
+          --container-image-name ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.run_id }}
+
 
         az webapp deployment container config \
           --name ${{ env.WEB_APP_NAME }} \
