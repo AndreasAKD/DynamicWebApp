@@ -21,7 +21,8 @@ const Services = ({}: ServicesProps) => {
           priority
         /> */}
         <section className="text-center sm:text-left mt-16">
-          <h1 className="text-4xl font-bold mb-8">{t('ourServices')}</h1>
+          <h1 className="text-4xl font-bold mb-8" style={{ color: 'white' }}>
+            {t('ourServices')}</h1>
           <p className="text-lg mb-10">
             {t('servicesDescription')}
           </p>
