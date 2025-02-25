@@ -1,3 +1,10 @@
+name: Deploy to Azure Web App
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -38,6 +45,9 @@ jobs:
         tags: |
           ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.run_id }}
           ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
+        registry: ${{ env.CONTAINER_REGISTRY }}
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
 
     - name: Deploy to Azure Web App for Containers - Personal Named Domain
       uses: azure/webapps-deploy@v2
