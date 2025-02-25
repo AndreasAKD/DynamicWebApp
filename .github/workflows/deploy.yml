@@ -51,9 +51,9 @@ jobs:
         registry: ${{ env.CONTAINER_REGISTRY }}.azurecr.io
 
     - name: Deploy to Azure Web App for Containers - Personal Named Domain
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: ${{ env.PERSONAL_DOMAIN }}
-        slot-name: production
-        images: ${{ env.CONTAINER_REGISTRY }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+      run: |
+        az webapp config container set \
+          --name ${{ env.WEB_APP_NAME }} \
+          --resource-group ${{ env.RESOURCE_GROUP }} \
+          --docker-custom-image-name ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
+          --slot production
