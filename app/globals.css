@@ -18,21 +18,21 @@
   --about-text: #171717;
   --portfolio-bg: #f0f0f0;
   --portfolio-text: #171717;
-  --contact-bg: hsl(143, 41%, 63%);
+  --contact-bg: hsl(143, 34%, 70%);
   --contact-text: #171717;
   --text-primary: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #121212;
+    --background: #405c46;
     --foreground: #ededed;
     --primary: #1E90FF;
     --secondary: #A9A9A9;
     --accent: #32CD32;
-    --navbar-bg: #1F1F1F;
+    --navbar-bg: #1e3122;
     --navbar-text: #ededed;
-    --hero-bg: #1a1a1a;
+    --hero-bg: #2b3d35;
     --hero-text: #ededed;
     --about-bg: #1f1f1f;
     --about-text: #ededed;

@@ -10,7 +10,7 @@ const About = ({}: AboutProps) => {
     const t = useTranslations();
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
+    <div className="min-h-screen flex flex-col" >
       <main className="flex-grow p-8 pb-20 sm:p-20 mt-[10vh]">
         <div className="text-xl text-center sm:text-left font-medium">
           <p className="mb-2" style={{ color: 'var(--text-primary)' }}>{t('about')}</p>
